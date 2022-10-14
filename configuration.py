@@ -1,13 +1,14 @@
 dataset_name = "voc"
 
-TRAIN_FROM_CHECKPOINT       = False # "saved_model/yolov3_custom"
-TRAIN_YOLO_TINY             = False
+TRAIN_TRANSFER        = True
+TRAIN_FROM_CHECKPOINT = False # "saved_model/yolov3_custom"
+TRAIN_YOLO_TINY       = False
 
 # YOLO options
-YOLO_TYPE                   = "yolov3" # yolov4 or yolov3
-YOLO_FRAMEWORK              = "tf" # "tf" or "trt"
+YOLO_TYPE = "yolov3" # yolov4 or yolov3
+YOLO_FRAMEWORK = "tf" # "tf" or "trt"
 
-YOLO_CUSTOM_WEIGHTS         = True # "checkpoints/yolov3_custom" # used in evaluate_mAP.py and custom model detection, if not using leave False
+YOLO_CUSTOM_WEIGHTS = True # "checkpoints/yolov3_custom" # used in evaluate_mAP.py and custom model detection, if not using leave False
                             # YOLO_CUSTOM_WEIGHTS also used with TensorRT and custom model detection    
 
 YOLO_V3_WEIGHTS             = "./checkpoints/yolov3.weights"
@@ -20,10 +21,10 @@ TRAIN_CLASSES               = "./dataset/voc/voc2012.names"
 TRAIN_ANNOT_PATH            = "./dataset/voc/VOC2012_train.txt"
 TEST_ANNOT_PATH             = "./dataset/voc/VOC2012_val.txt"
 if YOLO_TYPE == "yolov3":
-    TRAIN_CHECKPOINTS_FOLDER    = "./checkpoints/yolo_v3_voc"
+    TRAIN_CHECKPOINTS_FOLDER    = "./checkpoints"
     DATA_TYPE = "yolo_v3_voc"
 elif YOLO_TYPE == "yolov4":
-    TRAIN_CHECKPOINTS_FOLDER    = "./checkpoints/yolo_v4_voc"
+    TRAIN_CHECKPOINTS_FOLDER    = "./checkpoints"
     DATA_TYPE = "yolo_v4_voc"
     
 if TRAIN_YOLO_TINY:
