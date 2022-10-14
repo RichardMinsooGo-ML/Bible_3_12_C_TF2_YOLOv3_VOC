@@ -1,6 +1,6 @@
-dataset_name = "mnist"
+# dataset_name = "mnist"
 # dataset_name = "fashion_mnist"
-# dataset_name = "voc"
+dataset_name = "voc"
 # dataset_name = "coco"
 # dataset_name = "OID_v6"
 
